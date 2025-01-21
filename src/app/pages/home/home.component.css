@@ -1,4 +1,5 @@
 .container {
+  position: absolute;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -6,10 +7,11 @@
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 750px;
-  height: 750px;
+  min-height: 750px;
   background-color: #f4f4f4;
   margin: auto;
   border-radius: 10px;
@@ -21,6 +23,9 @@
 .nothing-to-do {
   text-align: center;
   margin: auto;
+}
+.nothing-to-do-image {
+  margin-bottom: 50px;
 }
 .task-list-div {
   padding: 20px;
@@ -44,6 +49,9 @@
   font-weight: 600;
   padding: 7px 20px;
   white-space: nowrap;
+}
+.add-task-btn:hover {
+  background-color: #70767b;
 }
 .add-task-input-box {
   width: 300px;
@@ -69,6 +77,7 @@
   height: 30%;
   border-top: 1px solid #36454f4d;
   color: #36454f;
+  padding: 5px;
 }
 .action-icons-parent {
   display: flex;
@@ -99,21 +108,58 @@
   background-color: #5afb03;
 }
 .completed-task-list {
-  padding: 30px;
+  padding: 20px;
   list-style: square;
   text-align: left;
   text-decoration: line-through;
 }
+.clear-all-btn {
+  height: 40px;
+  background-color: #36454f;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.clear-all-btn:hover {
+  background-color: #70767b;
+}
+.completed-task-header {
+  margin-bottom: 0.3rem;
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    border-radius: 0;
+  }
   .add-task-btn {
     margin-right: 25px;
   }
   .add-task-input-box {
     width: 200px;
   }
-  .main {
-    border-radius: 0;
+  .task-list-div {
+    width: 90%;
   }
+  .nothing-to-do {
+    width: 90%;
+    margin: auto 0;
+  }
+  .completed {
+    width: 100%;
+    margin: auto 0;
+  }
+
   .nothing-to-do-image {
     width: 80%;
     margin-bottom: 30px;

@@ -71,7 +71,8 @@
       />
     </div>
     <div *ngIf="getCompletedTasksLength() !== 0" class="completed">
-      <h3>Completed Tasks</h3>
+      <h3 class="completed-task-header">Completed Tasks</h3>
+      <a (click)="handleClearAll()" class="clear-all-btn"> clear all </a>
       <ul class="completed-task-list">
         <li
           *ngFor="let completedTask of completedTasks; let completedInd = index"

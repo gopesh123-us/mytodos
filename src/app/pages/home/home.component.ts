@@ -32,6 +32,10 @@ export class HomeComponent {
     this.tasks.splice(data, 1);
   }
 
+  handleClearAll() {
+    this.completedTasks.length = 0;
+  }
+
   getCompletedTasksLength(): number {
     return this.completedTasks.length;
   }
