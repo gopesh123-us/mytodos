@@ -48,6 +48,7 @@
   width: 300px;
   height: 40px;
   padding: 10px;
+  font-size: 1.2rem;
 }
 .add-task-parent-div {
   display: flex;
