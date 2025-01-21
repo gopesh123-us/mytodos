@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
   title = 'MyToDos';
-  tasks: string[] = ['To Learn Angular', 'To fix computer'];
+  tasks: string[] = [];
   newTask: string = '';
   getTasksItems(): number {
     return this.tasks.length;
@@ -19,6 +19,7 @@ export class HomeComponent {
     this.newTask = this.newTask.trim();
     if (this.newTask !== '' && !this.tasks.includes(this.newTask)) {
       this.tasks.push(this.newTask);
+      this.newTask = '';
     }
   }
   handleDelete(data: number) {
