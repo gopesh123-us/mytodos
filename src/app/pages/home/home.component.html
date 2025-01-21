@@ -13,14 +13,14 @@
     </div>
     <div class="task-list-div">
       <ul class="task-list">
-        <li *ngFor="let item of tasks" class="list-items">
+        <li *ngFor="let item of tasks; let ind = index" class="list-items">
           <div>
             <input type="radio" id="item" />&nbsp;&nbsp;<label for="item">{{
               item
             }}</label>
           </div>
           <div>
-            <button (click)="handleDelete()">Delete</button>
+            <button (click)="handleDelete(ind)">Delete</button>
           </div>
         </li>
       </ul>

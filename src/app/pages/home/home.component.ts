@@ -20,7 +20,7 @@ export class HomeComponent {
       this.tasks.push(this.newTask);
     }
   }
-  handleDelete() {
-    this.tasks.pop();
+  handleDelete(data: number) {
+    this.tasks.splice(data, 1);
   }
 }
