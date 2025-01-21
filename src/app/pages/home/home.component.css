@@ -111,4 +111,7 @@
   .add-task-input-box {
     width: 200px;
   }
+  .main {
+    border-radius: 0;
+  }
 }
