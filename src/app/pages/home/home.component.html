@@ -3,15 +3,25 @@
     <h1>{{ title }}</h1>
     <h2>Plan your task and achieve maximum productivity</h2>
     <div class="add-task-parent-div">
-      <input type="text" class="add-task-input-box" />
-      <a (click)="handleAddTask($event)" class="add-task-btn">Add Task</a>
+      <input
+        [(ngModel)]="newTask"
+        placeholder="Enter new task"
+        type="text"
+        class="add-task-input-box"
+      />
+      <a (click)="handleAddTask()" class="add-task-btn">Add Task</a>
     </div>
     <div class="task-list-div">
       <ul class="task-list">
-        <li *ngFor="let item of tasks">
-          <input type="radio" id="item" />&nbsp;&nbsp;<label for="item">{{
-            item
-          }}</label>
+        <li *ngFor="let item of tasks" class="list-items">
+          <div>
+            <input type="radio" id="item" />&nbsp;&nbsp;<label for="item">{{
+              item
+            }}</label>
+          </div>
+          <div>
+            <button (click)="handleDelete()">Delete</button>
+          </div>
         </li>
       </ul>
     </div>
