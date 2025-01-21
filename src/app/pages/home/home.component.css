@@ -114,4 +114,8 @@
   .main {
     border-radius: 0;
   }
+  .nothing-to-do-image {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }
