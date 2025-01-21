@@ -30,6 +30,30 @@
             />
           </div>
           <div class="action-icons-parent">
+            <div *ngIf="getEditingStatus(ind)">
+              <svg
+                (click)="updateTask(ind)"
+                class="action-icon return"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                id="return-key"
+              >
+                <polyline
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  points="26.76 11.62 3.19 34.55 26.76 57.48"
+                ></polyline>
+                <polyline
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  points="60.81 6.52 60.81 34.55 3.19 34.55"
+                ></polyline>
+              </svg>
+            </div>
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

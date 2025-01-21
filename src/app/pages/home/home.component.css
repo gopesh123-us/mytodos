@@ -88,6 +88,11 @@
   fill: #36454f;
   opacity: 0.5;
 }
+.action-icon.return {
+  height: 1.1rem;
+  fill: #36454f;
+  opacity: 0.5;
+}
 
 .action-icon.done {
   height: 1.1rem;
