@@ -8,6 +8,7 @@
         placeholder="Enter new task"
         type="text"
         class="add-task-input-box"
+        (keyup.enter)="handleAddTask()"
       />
       <a (click)="handleAddTask()" class="add-task-btn">Add Task</a>
     </div>

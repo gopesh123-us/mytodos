@@ -16,6 +16,7 @@ export class HomeComponent {
     return this.tasks.length;
   }
   handleAddTask() {
+    this.newTask = this.newTask.trim();
     if (this.newTask !== '' && !this.tasks.includes(this.newTask)) {
       this.tasks.push(this.newTask);
     }

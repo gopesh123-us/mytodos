@@ -33,6 +33,7 @@
 }
 
 .add-task-btn {
+  height: 40px;
   background-color: #36454f;
   color: #f4f4f4;
   border: none;
@@ -49,6 +50,9 @@
   height: 40px;
   padding: 10px;
   font-size: 1.2rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
 }
 .add-task-parent-div {
   display: flex;
