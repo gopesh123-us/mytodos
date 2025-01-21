@@ -27,6 +27,11 @@ export class HomeComponent {
     this.tasks.splice(data, 1);
   }
 
+  handleDone(data: number) {
+    this.completedTasks.push(this.tasks[data]);
+    this.tasks.splice(data, 1);
+  }
+
   getCompletedTasksLength(): number {
     return this.completedTasks.length;
   }
