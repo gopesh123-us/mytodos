@@ -12,6 +12,7 @@ export class HomeComponent {
   title = 'MyToDos';
   tasks: string[] = [];
   newTask: string = '';
+  completedTasks: string[] = [];
   getTasksItems(): number {
     return this.tasks.length;
   }
@@ -24,5 +25,9 @@ export class HomeComponent {
   }
   handleDelete(data: number) {
     this.tasks.splice(data, 1);
+  }
+
+  getCompletedTasksLength(): number {
+    return this.completedTasks.length;
   }
 }

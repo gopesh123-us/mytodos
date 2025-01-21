@@ -64,3 +64,37 @@
   display: flex;
   justify-content: space-between;
 }
+
+.completed {
+  height: 30%;
+  border-top: 1px solid #36454f4d;
+  color: #36454f;
+}
+.action-icons-parent {
+  display: flex;
+  gap: 10px;
+}
+.action-icon.edit {
+  height: 1.1rem;
+  fill: #36454f;
+  opacity: 0.5;
+}
+
+.action-icon.done {
+  height: 1.1rem;
+  fill: #5afb03;
+  opacity: 0.5;
+}
+.action-icon.delete {
+  height: 1.1rem;
+  fill: #fb2c03;
+  opacity: 0.5;
+}
+.action-icon:hover {
+  opacity: 1;
+}
+.action-icon.done:hover {
+  fill: #f4f4f4;
+  opacity: 0.5;
+  background-color: #5afb03;
+}
