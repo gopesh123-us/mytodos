@@ -30,7 +30,6 @@ export class HomeComponent {
   updateTask(data: number) {
     this.currentTask = this.currentTask.trim();
     if (this.currentTask !== '') {
-      this.tasks.splice(data, 1);
       this.tasks[data] = this.currentTask;
       this.doEditing = false;
       this.currentTask = '';
