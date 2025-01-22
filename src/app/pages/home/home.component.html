@@ -1,16 +1,25 @@
 <div class="container">
   <div class="main">
-    <h1>{{ title }}</h1>
-    <h2>Plan your task and achieve maximum productivity</h2>
+    <div class="title">
+      <p>{{ title }}</p>
+    </div>
+    <div class="slogan">
+      <p>Plan your task and achieve maximum productivity</p>
+    </div>
+
     <div class="add-task-parent-div">
-      <input
-        [(ngModel)]="newTask"
-        placeholder="Enter new task"
-        type="text"
-        class="add-task-input-box"
-        (keyup.enter)="handleAddTask()"
-      />
-      <a (click)="handleAddTask()" class="add-task-btn">Add Task</a>
+      <div>
+        <input
+          [(ngModel)]="newTask"
+          placeholder="Enter new task"
+          type="text"
+          class="add-task-input-box"
+          (keyup.enter)="handleAddTask()"
+        />
+      </div>
+      <div>
+        <a (click)="handleAddTask()" class="add-task-btn">Add Task</a>
+      </div>
     </div>
     <div class="task-list-div">
       <ul class="task-list">
@@ -22,6 +31,7 @@
           </div>
           <div *ngIf="getEditingStatus(ind)">
             <input type="radio" id="item" />&nbsp;&nbsp;<input
+              class="task-item-update-input-box"
               (keyup.enter)="updateTask(ind)"
               [(ngModel)]="currentTask"
               type="text"
